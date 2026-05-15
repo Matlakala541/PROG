@@ -3,12 +3,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 
+/**
+ * Login class for registration and authentication.
+ * Updated with firstNameSafe() and lastNameSafe() part3.
+ */
+
 import java.util.Scanner;
 /**
  *
  * @author RC_Student_lab
  */public class Login {
-// This class handles registration and login functionality for a simple chat app.
+// This class handles registration and login functionality.
 // It validates usernames, passwords, and South African phone numbers.
     private String username;
     private String password;
@@ -20,6 +25,10 @@ import java.util.Scanner;
     public Login(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
+    }
+
+    Login(String username, String password, String cell) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     /**
@@ -106,5 +115,29 @@ import java.util.Scanner;
             return "Welcome " + firstName + " " + lastName + ", it is great to see you again.";
         }
         return "Username or password is incorrect, please try again.";
+    }
+
+    boolean registerUser() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    boolean checkUserName() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    boolean checkPasswordComplexity() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    boolean returnLoginStatus(String fname, String lname, String inUser, String inPass) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    boolean checkCellPhoneNumber() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    Object[] firstNameSafe() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

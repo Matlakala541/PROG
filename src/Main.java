@@ -2,22 +2,26 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
+
+/**
+ *
+ * @author RC_Student_Lab
+ */
 // Main.java
-import java.util.Scanner;
+ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // Collect first and last name for personalized welcome message
         System.out.print("Enter your first name: ");
         String firstName = sc.nextLine();
+
         System.out.print("Enter your last name: ");
         String lastName = sc.nextLine();
 
         Login loginSystem = new Login(firstName, lastName);
 
-        // ---------- Registration (same as Part 1) ----------
         System.out.println("\n--- Registration ---");
         System.out.print("Enter a username (must contain _ and max 5 chars): ");
         String username = sc.nextLine();
@@ -31,13 +35,11 @@ public class Main {
         String registrationMessage = loginSystem.registerUser(username, password, cellNumber);
         System.out.println(registrationMessage);
 
-        // If registration failed, exit program
         if (!registrationMessage.equals("User registered successfully.")) {
             System.out.println("Registration failed. Please restart the program and try again.");
             return;
         }
 
-        // ---------- Login ----------
         System.out.println("\n--- Login ---");
         System.out.print("Enter username: ");
         String loginUsername = sc.nextLine();
@@ -47,7 +49,6 @@ public class Main {
         String loginMessage = loginSystem.returnLoginStatus(loginUsername, loginPassword);
         System.out.println(loginMessage);
 
-        // If login successful, launch MessageManager menu
         if (loginSystem.loginUser(loginUsername, loginPassword)) {
             MessageManager mgr = new MessageManager(loginSystem);
             mgr.runMenu();
